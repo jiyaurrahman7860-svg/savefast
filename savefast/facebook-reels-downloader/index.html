@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Facebook Reels Downloader - Free & Fast | SaveFast</title>
+  <meta name="description" content="Download Facebook Reels video in full HD quality online. Safe, unlimited, and free online FB reels saver with audio. Paste link and save MP4s instantly.">
+  <link rel="canonical" href="https://savefast.in/facebook-reels-downloader">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://savefast.in/facebook-reels-downloader">
+  <meta property="og:title" content="Facebook Reels Downloader - Free & Fast | SaveFast">
+  <meta property="og:description" content="Download Facebook Reels video in full HD quality online. Safe, unlimited, and free online FB reels saver with audio.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/firebase-config.js" defer></script>
+  <script src="../js/components.js" defer></script>
+  <script src="../js/downloader.js" defer></script>
+
+  <!-- Schemas (Breadcrumb, SoftwareApplication, FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://savefast.in"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Facebook Reels Downloader",
+      "item": "https://savefast.in/facebook-reels-downloader"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SaveFast Facebook Reels Downloader",
+    "operatingSystem": "All",
+    "applicationCategory": "MultimediaApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "19401"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How to copy Facebook reels video link?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tap the share button on the Facebook Reel you are viewing, then select 'Copy Link' to store the post URL on your clipboard."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can we download private FB reels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SaveFast only processes public Facebook Reels to maintain client-side privacy controls."
+      }
+    },{
+      "@type": "Question",
+      "name": "How do you download Facebook reels without app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open SaveFast.in/facebook-reels-downloader in any mobile or desktop web browser, paste the copied Reel URL, and download it directly without app setup."
+      }
+    },{
+      "@type": "Question",
+      "name": "Does this save FB Reels with music?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our scraper merges audio and video tracks, so you save FB Reels with sound included."
+      }
+    }]
+  }
+  </script>
+</head>
+<body>
+
+  <site-header root-path="../"></site-header>
+
+  <main>
+    <div class="container">
+      <ad-slot data-placement="header"></ad-slot>
+
+      <section class="hero-section reveal active">
+        <h1 style="font-size: clamp(32px, 5vw, 48px); margin-bottom: var(--spacing-sm); font-weight: 900;">
+          Facebook <span class="gradient-text">Reels Downloader</span>
+        </h1>
+        <p style="font-size: 15px; color: var(--color-on-surface-variant); max-width: 600px; margin: 0 auto var(--spacing-lg); line-height: 1.6;">
+          Download short Facebook reels directly to your phone or PC. Completely anonymous and instant.
+        </p>
+
+        <div class="glass-card p-xs glow-input" style="width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: var(--spacing-xs); border-radius: var(--rounded-lg); padding: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; width: 100%;">
+            <div style="flex-grow: 1; display: flex; align-items: center; padding: 4px 12px; min-width: 280px; position: relative;">
+              <span class="material-symbols-outlined" style="color: var(--color-on-surface-variant); margin-right: 12px;">link</span>
+              <input type="text" id="downloader-url-input" placeholder="Paste Facebook Reel link here..." style="background: transparent; border: none; padding: 12px 0; color: var(--color-on-surface); width: 100%; font-size: 16px;">
+            </div>
+            
+            <div style="display: flex; gap: 8px; width: 100%; justify-content: flex-end; flex-wrap: wrap; margin-top: 4px;">
+              <button id="downloader-paste-btn" class="btn btn-glass" style="display: flex; align-items: center; gap: 6px; padding: 12px 20px; font-size: 14px; flex-grow: 1; justify-content: center;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">content_paste</span> Paste
+              </button>
+              <button id="downloader-submit-btn" class="btn btn-primary" style="display: flex; align-items: center; gap: 6px; padding: 12px 28px; font-size: 16px; font-weight: 700; flex-grow: 1; justify-content: center;">
+                Download <span class="material-symbols-outlined" style="font-size: 20px;">download</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="downloader-error-container" class="hidden" style="margin-top: 16px; color: var(--color-error); font-weight: 600; font-size: 14px; background: rgba(255,180,171,0.1); border: 1px solid var(--color-error); padding: 8px 16px; border-radius: var(--rounded-default);">
+        </div>
+      </section>
+
+      <div id="downloader-result-container"></div>
+
+      <ad-slot data-placement="content"></ad-slot>
+
+      <section class="reveal" style="margin: 48px auto; line-height: 1.8; color: var(--color-on-surface-variant);">
+        <h2 style="font-size: 24px; color: var(--color-on-surface); margin-bottom: 16px;">Fast Facebook Reels Saver</h2>
+        <p style="margin-bottom: 16px;">
+          Keep copies of your favorite viral reels from Facebook. Our high-speed parser engine queries post data and delivers clean direct download streams, merging audio and video so you save Facebook Reels with music intact.
+        </p>
+        <p>
+          Simply tap 'Copy Link' on the Facebook Reel, paste it into our downloader input above, and click Download. SaveFast extracts the highest available resolution (SD or HD 1080p) instantly.
+        </p>
+      </section>
+
+      <!-- FAQs -->
+      <section class="reveal faq-container" style="margin: 48px auto;">
+        <h2 style="font-size: 24px; text-align: center; margin-bottom: 24px; color: var(--color-on-surface);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">How to copy a Facebook Reels video link?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              Tap the share button on the Facebook Reel and select 'Copy Link' to store the post URL on your clipboard.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Can we download private FB reels?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No. SaveFast only processes public reels to respect user privacy settings.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">How do you download Facebook reels without an app?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              Open SaveFast.in/facebook-reels-downloader in any mobile or desktop web browser, paste the Reel link, and save it directly to your storage without any setup.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Are there any limits on the number of FB Reels downloads?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No, our web downloader provides unlimited free queries without caps or volume restrictions.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <related-tools root-path="../"></related-tools>
+    </div>
+  </main>
+
+  <site-footer root-path="../"></site-footer>
+
+  <script>
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

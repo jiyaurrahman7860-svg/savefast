@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Privacy Policy - SaveFast | SaveFast.in</title>
+  <meta name="description" content="Read the Privacy Policy of SaveFast (SaveFast.in). Learn how we protect user information, cookies usage, and GDPR compliance.">
+  <link rel="canonical" href="https://savefast.in/privacy.html">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/components.js" defer></script>
+</head>
+<body>
+
+  <site-header root-path="./"></site-header>
+
+  <main style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="container" style="max-width: 800px;">
+      
+      <ad-slot data-placement="header"></ad-slot>
+
+      <article class="reveal active glass-card p-md" style="border-radius: var(--rounded-lg); line-height: 1.8; color: var(--color-on-surface-variant); font-size: 15px; border-color: rgba(255,255,255,0.06); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <h1 class="gradient-text" style="font-size: 36px; margin-bottom: 24px; font-weight: 800;">Privacy Policy</h1>
+        
+        <p style="margin-bottom: 16px;">Last updated: June 13, 2026</p>
+        
+        <p style="margin-bottom: 24px;">
+          At SaveFast (SaveFast.in), we prioritize your privacy. This policy describes how we collect, process, and protect your information when you access our social downloader utilities.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">1. Information We Do NOT Collect</h2>
+        <p style="margin-bottom: 16px;">
+          We operate under a strict "No-Logs" approach. Since you are not required to create an account or sign up to use our retrieval services, we do not collect your personal details (like names, phone numbers, or mailing addresses).
+        </p>
+        <p style="margin-bottom: 16px;">
+          Furthermore, we do not download or save copies of the media you retrieve on our databases. All content is processed temporarily through secure memory streams and delivered directly from the original platforms (Instagram, Facebook, Pinterest, etc.) to your client storage.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">2. Logs and Usage Data</h2>
+        <p style="margin-bottom: 16px;">
+          To prevent server abuse and rate-limit spam requests, our server logs temporary networking indicators, such as IP addresses, referring URLs, browser metadata, and operation timestamps. These logs are stored securely in Firestore and deleted periodically.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">3. Cookies and Advertising</h2>
+        <p style="margin-bottom: 16px;">
+          We use local cookies and storage states to keep track of your active layout configuration preferences (such as light/dark mode settings).
+        </p>
+        <p style="margin-bottom: 16px;">
+          We work with premium display networks (such as Adsterra) to deliver relevant, family-safe advertisements. These third-party networks may use cookies or web beacons to customize ads based on your generic browsing activity across the web.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">4. GDPR &amp; CCPA Compliance</h2>
+        <p style="margin-bottom: 16px;">
+          Under data protection guidelines, visitors retain rights to access, update, or clear their personal logs. Because we do not store names, identities, or files, clearing your local browser cookies and cache fully removes your associations with our utilities.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">5. Revisions</h2>
+        <p style="margin-bottom: 16px;">
+          We reserve the right to revise this policy periodically. Any changes will be posted here with an updated revision date.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">6. Support Inquiries</h2>
+        <p style="margin-bottom: 16px;">
+          If you have concerns about our privacy policy, please drop a note via our <a href="contact.html" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">Contact Page</a>.
+        </p>
+      </article>
+
+      <ad-slot data-placement="content"></ad-slot>
+
+    </div>
+  </main>
+
+  <site-footer root-path="./"></site-footer>
+
+  <script>
+    // Scroll reveal
+    const options = { threshold: 0.1 };
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, options);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Terms of Service - SaveFast | SaveFast.in</title>
+  <meta name="description" content="Review the Terms of Service for using SaveFast (SaveFast.in). Guidelines for proper use of our video extraction utilities.">
+  <link rel="canonical" href="https://savefast.in/terms.html">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/components.js" defer></script>
+</head>
+<body>
+
+  <site-header root-path="./"></site-header>
+
+  <main style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="container" style="max-width: 800px;">
+      
+      <ad-slot data-placement="header"></ad-slot>
+
+      <article class="reveal active glass-card p-md" style="border-radius: var(--rounded-lg); line-height: 1.8; color: var(--color-on-surface-variant); font-size: 15px; border-color: rgba(255,255,255,0.06); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+        <h1 class="gradient-text" style="font-size: 36px; margin-bottom: 24px; font-weight: 800;">Terms of Service</h1>
+        
+        <p style="margin-bottom: 16px;">Last updated: June 13, 2026</p>
+        
+        <p style="margin-bottom: 24px;">
+          Welcome to SaveFast (SaveFast.in). By accessing our media parsing tools, you agree to comply with and be bound by the following Terms of Service.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">1. Acceptance of Terms</h2>
+        <p style="margin-bottom: 16px;">
+          By visiting, browsing, or using SaveFast, you acknowledge that you have read, understood, and agreed to these terms. If you do not agree, please stop using our services immediately.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">2. Description of Service</h2>
+        <p style="margin-bottom: 16px;">
+          SaveFast provides a client-side parser utility that parses link pathways to social platform streams (such as Instagram Reels, Pinterest Pins, Facebook Videos).
+        </p>
+        <p style="margin-bottom: 16px;">
+          You agree to use this tool strictly for personal, non-commercial, and archiving purposes. You are solely responsible for ensuring that you have permissions from the copyright owner to download any specific media work offline.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">3. Prohibited Conduct</h2>
+        <p style="margin-bottom: 16px;">
+          When utilizing our tool, you agree not to:
+        </p>
+        <ul style="margin-left: 24px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px;">
+          <li>Automate scrape requests or queries using scripts, botnets, or scrapers.</li>
+          <li>Overload or launch Denial of Service (DoS) attacks against our service gateways.</li>
+          <li>Bypass rate limits or networking boundaries.</li>
+          <li>Utilize the downloader for files that violate local laws or constitute illegal content.</li>
+        </ul>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">4. Disclaimers and Warranties</h2>
+        <p style="margin-bottom: 16px;">
+          Our platform is provided "As Is" and "As Available" without warranty of any kind. We do not guarantee that the scraper mechanisms will run uninterrupted, or that external social platforms won't block access or change their protocols.
+        </p>
+        <p style="margin-bottom: 16px;">
+          We are not liable for any direct, indirect, or incidental damages resulting from the use or inability to use our tools.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">5. Term Revisions</h2>
+        <p style="margin-bottom: 16px;">
+          We can modify these terms at any time. Your continued use of the website following changes means you accept the revised rules.
+        </p>
+
+        <h2 style="font-size: 20px; color: var(--color-on-surface); margin: 24px 0 12px; font-weight: 700;">6. Inquiries</h2>
+        <p style="margin-bottom: 16px;">
+          For any questions concerning these terms, please contact us via the <a href="contact.html" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">Contact Page</a>.
+        </p>
+      </article>
+
+      <ad-slot data-placement="content"></ad-slot>
+
+    </div>
+  </main>
+
+  <site-footer root-path="./"></site-footer>
+
+  <script>
+    // Scroll reveal
+    const options = { threshold: 0.1 };
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, options);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

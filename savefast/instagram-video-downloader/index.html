@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Optimization -->
+  <title>Instagram Video Downloader - Free & Fast | SaveFast</title>
+  <meta name="description" content="Download Instagram videos online in full HD quality. Safe, unlimited downloads with no signup required. Paste your link and save MP4s instantly.">
+  <link rel="canonical" href="https://savefast.in/instagram-video-downloader">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://savefast.in/instagram-video-downloader">
+  <meta property="og:title" content="Instagram Video Downloader - Free & Fast | SaveFast">
+  <meta property="og:description" content="Download Instagram videos online in full HD quality. Safe, unlimited downloads with no signup required.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=60">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://savefast.in/instagram-video-downloader">
+  <meta property="twitter:title" content="Instagram Video Downloader - Free & Fast | SaveFast">
+  <meta property="twitter:description" content="Download Instagram videos online in full HD quality. Safe, unlimited downloads with no signup required.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/firebase-config.js" defer></script>
+  <script src="../js/components.js" defer></script>
+  <script src="../js/downloader.js" defer></script>
+
+  <!-- Schemas (Breadcrumb, SoftwareApplication, FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://savefast.in"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Instagram Video Downloader",
+      "item": "https://savefast.in/instagram-video-downloader"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SaveFast Instagram Video Downloader",
+    "operatingSystem": "All",
+    "applicationCategory": "MultimediaApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "18452"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Is SaveFast free to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, SaveFast is a 100% free web utility. You can download unlimited videos and photos from Instagram without paying or creating an account."
+      }
+    },{
+      "@type": "Question",
+      "name": "Do I need to log in to my Instagram account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, you do not need to sign in or share credentials. Just paste public links to download."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I download private Instagram posts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. To protect user privacy, online scrapers like SaveFast only support public Instagram posts."
+      }
+    },{
+      "@type": "Question",
+      "name": "Will the owner know if I download their posts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never. SaveFast queries public web caches anonymously without requesting account credentials, so no notification is sent."
+      }
+    },{
+      "@type": "Question",
+      "name": "Does the downloader reduce the resolution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SaveFast grabs the direct raw link of the file hosted on Meta CDN servers, downloading it in its original quality."
+      }
+    }]
+  }
+  </script>
+</head>
+<body>
+
+  <site-header root-path="../"></site-header>
+
+  <main>
+    <div class="container">
+      <ad-slot data-placement="header"></ad-slot>
+
+      <!-- Tool Hero -->
+      <section class="hero-section reveal active">
+        <h1 style="font-size: clamp(32px, 5vw, 48px); margin-bottom: var(--spacing-sm); font-weight: 900;">
+          Instagram <span class="gradient-text">Video Downloader</span>
+        </h1>
+        <p style="font-size: 15px; color: var(--color-on-surface-variant); max-width: 600px; margin: 0 auto var(--spacing-lg); line-height: 1.6;">
+          Save Instagram videos directly to your device storage in high quality. Quick, private, and unlimited.
+        </p>
+
+        <!-- Form Widget -->
+        <div class="glass-card p-xs glow-input" style="width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: var(--spacing-xs); border-radius: var(--rounded-lg); padding: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; width: 100%;">
+            <div style="flex-grow: 1; display: flex; align-items: center; padding: 4px 12px; min-width: 280px; position: relative;">
+              <span class="material-symbols-outlined" style="color: var(--color-on-surface-variant); margin-right: 12px;">link</span>
+              <input type="text" id="downloader-url-input" placeholder="Paste Instagram post or video link here..." style="background: transparent; border: none; padding: 12px 0; color: var(--color-on-surface); width: 100%; font-size: 16px;">
+            </div>
+            
+            <div style="display: flex; gap: 8px; width: 100%; justify-content: flex-end; flex-wrap: wrap; margin-top: 4px;">
+              <button id="downloader-paste-btn" class="btn btn-glass" style="display: flex; align-items: center; gap: 6px; padding: 12px 20px; font-size: 14px; flex-grow: 1; justify-content: center;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">content_paste</span> Paste
+              </button>
+              <button id="downloader-submit-btn" class="btn btn-primary" style="display: flex; align-items: center; gap: 6px; padding: 12px 28px; font-size: 16px; font-weight: 700; flex-grow: 1; justify-content: center;">
+                Download <span class="material-symbols-outlined" style="font-size: 20px;">download</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="downloader-error-container" class="hidden" style="margin-top: 16px; color: var(--color-error); font-weight: 600; font-size: 14px; background: rgba(255,180,171,0.1); border: 1px solid var(--color-error); padding: 8px 16px; border-radius: var(--rounded-default);">
+        </div>
+      </section>
+
+      <!-- Results Target -->
+      <div id="downloader-result-container"></div>
+
+      <ad-slot data-placement="content"></ad-slot>
+
+      <!-- Features section specific to Instagram -->
+      <section class="reveal" style="margin: 48px auto; line-height: 1.8; color: var(--color-on-surface-variant);">
+        <h2 style="font-size: 24px; color: var(--color-on-surface); margin-bottom: 16px;">High-Quality Instagram Video Downloader</h2>
+        <p style="margin-bottom: 16px;">
+          Instagram is home to incredible creators, and sometimes you need to back up files for archiving, reference, or sharing offline. Our downloader simplifies the process, fetching direct video streams in standard MP4 formats.
+        </p>
+        <p>
+          Simply click share on the Instagram video post, copy the link, paste it into the input field above, and click Download. SaveFast processes the query in milliseconds, completely bypassing bandwidth throttling to deliver original HD quality.
+        </p>
+      </section>
+
+      <!-- FAQs -->
+      <section class="reveal faq-container" style="margin: 48px auto;">
+        <h2 style="font-size: 24px; text-align: center; margin-bottom: 24px; color: var(--color-on-surface);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Is SaveFast free to use?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              Yes, SaveFast is a 100% free web utility. You can download unlimited videos and photos from Instagram without paying or creating an account.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Do I need to log in to my Instagram account?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No, you do not need to sign in or share your account credentials. Just paste public post links to download.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Can I download private Instagram posts?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No. To protect user privacy, online scrapers like SaveFast only support public Instagram posts, reels, and stories.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Will the owner know if I download their posts?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              Never. SaveFast queries public web caches anonymously without requesting account credentials, so no notification is sent to the profile owner.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Does the downloader reduce the resolution?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No. SaveFast grabs the direct raw link of the file hosted on Meta CDN servers, downloading it in its original quality.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <related-tools root-path="../"></related-tools>
+    </div>
+  </main>
+
+  <site-footer root-path="../"></site-footer>
+
+  <script>
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

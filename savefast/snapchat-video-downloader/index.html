@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Snapchat Video Downloader - Free & Fast | SaveFast</title>
+  <meta name="description" content="Download Snapchat Spotlight videos and public stories online in HD. Safe, unlimited, and free online Snapchat saver. Paste link and download MP4s instantly.">
+  <link rel="canonical" href="https://savefast.in/snapchat-video-downloader">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://savefast.in/snapchat-video-downloader">
+  <meta property="og:title" content="Snapchat Video Downloader - Free & Fast | SaveFast">
+  <meta property="og:description" content="Download Snapchat Spotlight videos and public stories online in HD. Safe, unlimited, and free online Snapchat saver.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=1200&q=60">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/firebase-config.js" defer></script>
+  <script src="../js/components.js" defer></script>
+  <script src="../js/downloader.js" defer></script>
+
+  <!-- Schemas (Breadcrumb, SoftwareApplication, FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://savefast.in"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Snapchat Video Downloader",
+      "item": "https://savefast.in/snapchat-video-downloader"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SaveFast Snapchat Video Downloader",
+    "operatingSystem": "All",
+    "applicationCategory": "MultimediaApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "11401"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Does Snapchat notify when you download a video?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. When downloading public Spotlight or story clips via SaveFast, we query public server caches, bypassing in-app warning hooks."
+      }
+    },{
+      "@type": "Question",
+      "name": "How to save Snapchat spotlight videos without watermark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SaveFast pulls the raw source stream, so your saved spotlight videos do not contain watermarks."
+      }
+    },{
+      "@type": "Question",
+      "name": "How to download public Snapchat video on computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copy the public URL on snapchat.com, visit SaveFast.in/snapchat-video-downloader, paste the link, and download the MP4."
+      }
+    },{
+      "@type": "Question",
+      "name": "Can I download private snaps or private stories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SaveFast only processes public, shared Spotlight and public story links to maintain user privacy compliance."
+      }
+    }]
+  }
+  </script>
+</head>
+<body>
+
+  <site-header root-path="../"></site-header>
+
+  <main>
+    <div class="container">
+      <ad-slot data-placement="header"></ad-slot>
+
+      <section class="hero-section reveal active">
+        <h1 style="font-size: clamp(32px, 5vw, 48px); margin-bottom: var(--spacing-sm); font-weight: 900;">
+          Snapchat <span class="gradient-text">Video Downloader</span>
+        </h1>
+        <p style="font-size: 15px; color: var(--color-on-surface-variant); max-width: 600px; margin: 0 auto var(--spacing-lg); line-height: 1.6;">
+          Download public spotlight clips and story videos from Snapchat. (Public Content Only)
+        </p>
+
+        <div class="glass-card p-xs glow-input" style="width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: var(--spacing-xs); border-radius: var(--rounded-lg); padding: 8px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; width: 100%;">
+            <div style="flex-grow: 1; display: flex; align-items: center; padding: 4px 12px; min-width: 280px; position: relative;">
+              <span class="material-symbols-outlined" style="color: var(--color-on-surface-variant); margin-right: 12px;">link</span>
+              <input type="text" id="downloader-url-input" placeholder="Paste public Snapchat story or spotlight link here..." style="background: transparent; border: none; padding: 12px 0; color: var(--color-on-surface); width: 100%; font-size: 16px;">
+            </div>
+            
+            <div style="display: flex; gap: 8px; width: 100%; justify-content: flex-end; flex-wrap: wrap; margin-top: 4px;">
+              <button id="downloader-paste-btn" class="btn btn-glass" style="display: flex; align-items: center; gap: 6px; padding: 12px 20px; font-size: 14px; flex-grow: 1; justify-content: center;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">content_paste</span> Paste
+              </button>
+              <button id="downloader-submit-btn" class="btn btn-primary" style="display: flex; align-items: center; gap: 6px; padding: 12px 28px; font-size: 16px; font-weight: 700; flex-grow: 1; justify-content: center;">
+                Download <span class="material-symbols-outlined" style="font-size: 20px;">download</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="downloader-error-container" class="hidden" style="margin-top: 16px; color: var(--color-error); font-weight: 600; font-size: 14px; background: rgba(255,180,171,0.1); border: 1px solid var(--color-error); padding: 8px 16px; border-radius: var(--rounded-default);">
+        </div>
+      </section>
+
+      <div id="downloader-result-container"></div>
+
+      <ad-slot data-placement="content"></ad-slot>
+
+      <section class="reveal" style="margin: 48px auto; line-height: 1.8; color: var(--color-on-surface-variant);">
+        <h2 style="font-size: 24px; color: var(--color-on-surface); margin-bottom: 16px;">Save Snapchat Spotlights Offline</h2>
+        <p style="margin-bottom: 16px;">
+          Snapchat Spotlight displays viral public clips. If you want to keep copies of interesting tutorial videos, memes, or highlights, our Snapchat Video Downloader isolates public CDN streaming paths to let you save spotlight videos without watermarks.
+        </p>
+        <p>
+          Note: This tool supports public content (Spotlight or public stories) only. We do not extract files from private chats or personal accounts to respect user safety regulations. Simply copy the link, paste it in the box above, and download MP4s instantly.
+        </p>
+      </section>
+
+      <!-- FAQs -->
+      <section class="reveal faq-container" style="margin: 48px auto;">
+        <h2 style="font-size: 24px; text-align: center; margin-bottom: 24px; color: var(--color-on-surface);">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Does Snapchat notify creators when you download Spotlight videos?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No. When you use SaveFast to download public Spotlight clips or public stories, the parser fetches files from public CDN nodes, bypassing in-app screenshot warnings.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">How to save Snapchat spotlight videos without watermarks?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              SaveFast extracts the original, raw video stream file directly, ensuring that downloaded spotlight files do not contain watermarks.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">How to download a public Snapchat video on a computer?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              Open snapchat.com in your PC web browser, navigate to the public story or Spotlight video, copy the URL path from your search bar, paste it above on SaveFast, and download the MP4 file.
+            </div>
+          </div>
+          <div class="glass-card faq-item">
+            <button class="faq-header">
+              <span style="font-weight: 700;">Can I download private snaps or private stories?</span>
+              <span class="material-symbols-outlined faq-icon">expand_more</span>
+            </button>
+            <div class="faq-content">
+              No. SaveFast strictly respects user privacy compliance rules and does not support private files or chat downloads.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <related-tools root-path="../"></related-tools>
+    </div>
+  </main>
+
+  <site-footer root-path="../"></site-footer>
+
+  <script>
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
