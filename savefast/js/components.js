@@ -646,9 +646,33 @@ injectAdCode(code) {
 const wrapper = this.querySelector('#ad-wrapper');
 if (!wrapper) return;
 wrapper.innerHTML = '';
+
 const range = document.createRange();
 const documentFragment = range.createContextualFragment(code);
+
+// Intercept document.write during script execution because many ad scripts (like Adsterra) use it
+const originalWrite = document.write;
+const originalWriteln = document.writeln;
+
+document.write = document.writeln = (html) => {
+const tempDiv = document.createElement('div');
+tempDiv.innerHTML = html;
+while (tempDiv.firstChild) {
+wrapper.appendChild(tempDiv.firstChild);
+}
+};
+
+try {
 wrapper.appendChild(documentFragment);
+} catch (err) {
+console.warn("Error injecting ad code:", err);
+} finally {
+// Restore original write methods after synchronous execution
+setTimeout(() => {
+document.write = originalWrite;
+document.writeln = originalWriteln;
+}, 100);
+}
 }
 setupFallbackSim() {
 const wrapper = this.querySelector('#ad-wrapper');
